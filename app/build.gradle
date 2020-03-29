@@ -4,7 +4,7 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion 29
 
     defaultConfig {
         applicationId "com.wiseassblog.kotlincalculator"
@@ -38,7 +38,10 @@ android {
 dependencies {
     implementation deps.android.appcompat
     implementation deps.android.constraint_layout
-    implementation deps.android.lifecycle_extensions
+    implementation deps.android.lifecycle_runtime
+    implementation deps.android.lifecycle_java8
+    implementation deps.android.lifecycle_viewmodel_ktx
+    implementation deps.android.lifecycle_livedata_ktx
     implementation deps.kotlin.kotlin_jre
     kapt deps.android.lifecycle_compiler
 
